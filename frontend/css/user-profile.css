@@ -6,8 +6,17 @@
     box-sizing: border-box;
     font-family: 'Raleway';
 } */
-.profile-card {
+
+.container {
     display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: ; */
+}
+.profile-card {
+    display: none;
+    display: flex;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -16,6 +25,11 @@
     /* min-width: 200px; */
     background-image: linear-gradient(rgba(55, 68, 121, 0.6), rgba(10, 23, 45, 0.9));
 } 
+@media (width <= 800px) {
+    .profile-card {
+        display: none;
+    }
+}
 .profile-card img{
     left: 0;
     max-height: 800px;
@@ -36,3 +50,30 @@
     color: #A5D7E8;
     font-weight: 700;
 } 
+
+.cards {
+    /* background-color: antiquewhite; */
+    margin-left: 400px;
+    margin-right: 250px;
+    padding: 20px;
+
+}
+.card {
+    background-color: rgba(10, 23, 45, 0.9);
+    padding: 20px;
+    /* border: 2px solid ; */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+}
+.card h1{
+    color: #A5D7E8;
+    letter-spacing: 6px;
+    font-size: 40px;
+}
+
+.card p{
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 35px;
+}
