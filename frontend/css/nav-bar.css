@@ -7,7 +7,7 @@
     font-family: 'Raleway';
 }
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     width: 100%;
     background-image: url('/images/TLOU2_Wallpaper2.png')
