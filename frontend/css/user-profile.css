@@ -6,6 +6,38 @@
     box-sizing: border-box;
     font-family: 'Raleway';
 } */
+* {
+
+}
+body {
+    position: relative;
+    overflow: hidden; /* Ensure the gradient covers the whole body */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.8));
+    z-index: -1; /* Place it behind the content */
+    pointer-events: none; /* Allow interaction with underlying elements */
+}
+
+body::after {
+    content: "";
+    background: url(/images/bg1.jpg) center/cover no-repeat; /* Adjust this to your needs */
+    filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Place it behind the gradient pseudo-element */
+    pointer-events: none; /* Allow interaction with underlying elements */
+}
 
 .container {
     display: flex;
@@ -24,8 +56,9 @@
     max-width: 400px;
     /* min-width: 200px; */
     background-image: linear-gradient(rgba(55, 68, 121, 0.6), rgba(10, 23, 45, 0.9));
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
 } 
-@media (width <= 800px) {
+@media (width <= 900px) {
     .profile-card {
         display: none;
     }
@@ -53,20 +86,24 @@
 
 .cards {
     /* background-color: antiquewhite; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
     margin-left: 400px;
     margin-right: 250px;
     padding: 20px;
+    gap: 20px;
 
 }
 .card {
-    background-color: rgba(10, 23, 45, 0.9);
+    background-color: rgba(165, 215, 232, 0.5);
     padding: 20px;
     /* border: 2px solid ; */
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,.25);
 }
 .card h1{
-    color: #A5D7E8;
+    color: #19376D;
     letter-spacing: 6px;
     font-size: 40px;
 }
@@ -76,4 +113,21 @@
     color: #fff;
     letter-spacing: 3px;
     line-height: 35px;
+}
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+/* .experience dl {
+    lis;
+    
+} */
+.experience dt {
+    font-size: 20px;
+    color: #A5D7E8;
+}
+.experience dd{
+    color: #fff;
 }
