@@ -120,6 +120,14 @@ body::after {
     flex-direction: row;
     gap: 10px;
 }
+/* .experience dl {
+    lis;
+    
+} */
 .experience dt {
     font-size: 20px;
+    color: #A5D7E8;
+}
+.experience dd{
+    color: #fff;
 }
